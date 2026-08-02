@@ -48,7 +48,7 @@ export default function LoginPage() {
     <Card className="p-8">
       <h2 className="text-xl font-bold text-slate-900">Iniciar sesión</h2>
       <p className="mt-1 text-sm text-slate-500">
-        Accede con tu cuenta THALEX SYSTEMS.
+        Accede con tu cuenta THALEX Portal.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-4" noValidate>

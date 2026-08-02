@@ -41,7 +41,7 @@ export default function Sidebar({ open, onClose }) {
               T
             </span>
             <span className="text-sm font-semibold tracking-tight text-white">
-              THALEX SYSTEMS
+              THALEX Portal
             </span>
           </div>
           <button

@@ -1,6 +1,24 @@
-# Thalex Systems · Client Portal
+# THALEX Portal
 
-Portal de clientes de **Thalex Systems**. Frontend (SPA) de la Fase 2 del ecosistema: una sola app, un solo login, UI según rol y permisos RBAC/ACL.
+Plataforma digital de THALEX SYSTEMS para clientes y equipo interno. Un único acceso con una experiencia personalizada según el tipo de usuario.
+
+Frontend (SPA) de la Fase 2 del ecosistema: una sola app, un solo login, UI según rol y permisos RBAC/ACL.
+
+## Plataforma
+
+THALEX Portal integra dos áreas en una sola aplicación:
+
+### 1. Portal de Clientes
+
+- **Para usuarios `CLIENT`.**
+- Espacio donde los clientes pueden consultar sus **servicios, proyectos, documentos, pagos** y la **comunicación** con THALEX SYSTEMS.
+
+### 2. Panel de Gestión
+
+- **Para usuarios internos** (`OWNER`, `ADMIN`, `SUPERVISOR`).
+- Espacio donde el equipo interno administra la **operación** de THALEX SYSTEMS: clientes, leads, cotizaciones, proyectos, pagos, soporte y la administración del ecosistema.
+
+> Un solo login, una sola aplicación. Cada usuario ve la interfaz correspondiente a su rol (RBAC/ACL).
 
 ## Stack
 

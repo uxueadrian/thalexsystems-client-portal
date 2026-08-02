@@ -8,9 +8,11 @@ export default function AuthLayout({ children }) {
           </span>
           <div className="text-center">
             <h1 className="text-lg font-bold tracking-tight text-white">
-              THALEX SYSTEMS
+              THALEX Portal
             </h1>
-            <p className="text-sm text-slate-400">Portal del ecosistema</p>
+            <p className="text-sm text-slate-400">
+              Plataforma para clientes y equipo interno
+            </p>
           </div>
         </div>
         {children}

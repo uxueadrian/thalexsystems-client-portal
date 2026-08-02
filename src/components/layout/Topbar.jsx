@@ -39,7 +39,7 @@ export default function Topbar({ onMenuClick }) {
         >
           <Menu className="h-5 w-5" />
         </button>
-        <span className="text-sm font-semibold text-slate-900">Portal THALEX SYSTEMS</span>
+        <span className="text-sm font-semibold text-slate-900">THALEX Portal</span>
       </div>
 
       <div className="flex items-center gap-3">
