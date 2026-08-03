@@ -12,6 +12,8 @@ import DashboardHome from '../pages/dashboard/DashboardHome'
 import ProfilePage from '../pages/dashboard/ProfilePage'
 import UsuariosPage from '../pages/users/UsuariosPage'
 import ServiciosPage from '../pages/servicios/ServiciosPage'
+import ClientesPage from '../pages/clientes/ClientesPage'
+import ClienteDetallePage from '../pages/clientes/ClienteDetallePage'
 import NotFoundPage from '../pages/errors/NotFoundPage'
 import UnauthorizedPage from '../pages/errors/UnauthorizedPage'
 import { useAuth } from '../hooks/useAuth'
@@ -78,7 +80,27 @@ export default function AppRoutes() {
           }
         />
 
-        {MODULES.filter((m) => m.path !== '/usuarios' && m.path !== '/servicios').map((module) => (
+        <Route
+          path="/clientes"
+          element={
+            <ProtectedRoute permissions={MODULES.find((m) => m.path === '/clientes').permissions}>
+              <ClientesPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/clientes/:id"
+          element={
+            <ProtectedRoute permissions={MODULES.find((m) => m.path === '/clientes').permissions}>
+              <ClienteDetallePage />
+            </ProtectedRoute>
+          }
+        />
+
+        {MODULES.filter(
+          (m) => m.path !== '/usuarios' && m.path !== '/servicios' && m.path !== '/clientes'
+        ).map((module) => (
           <Route
             key={module.path}
             path={module.path}

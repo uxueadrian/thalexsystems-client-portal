@@ -30,7 +30,7 @@ export const MODULES = [
     description: 'Administra la cartera de clientes del ecosistema.',
     icon: Building2,
     section: 'Operación',
-    permissions: [PERMISSIONS.CLIENTS_VIEW, PERMISSIONS.CLIENTS_VIEW_ASSIGNED],
+    permissions: [PERMISSIONS.CLIENTS_VIEW, PERMISSIONS.CLIENTS_MANAGE],
   },
   {
     path: '/leads',
