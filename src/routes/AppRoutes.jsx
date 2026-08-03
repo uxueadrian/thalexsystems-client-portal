@@ -7,9 +7,11 @@ import ProtectedRoute from '../components/ProtectedRoute'
 import FullPageLoader from '../components/FullPageLoader'
 import ComingSoon from '../components/layout/ComingSoon'
 import LoginPage from '../pages/auth/LoginPage'
+import CareContratarPage from '../pages/care/CareContratarPage'
 import DashboardHome from '../pages/dashboard/DashboardHome'
 import ProfilePage from '../pages/dashboard/ProfilePage'
 import UsuariosPage from '../pages/users/UsuariosPage'
+import ServiciosPage from '../pages/servicios/ServiciosPage'
 import NotFoundPage from '../pages/errors/NotFoundPage'
 import UnauthorizedPage from '../pages/errors/UnauthorizedPage'
 import { useAuth } from '../hooks/useAuth'
@@ -35,6 +37,8 @@ export default function AppRoutes() {
           </AuthLayout>
         }
       />
+
+      <Route path="/care/contratar" element={<CareContratarPage />} />
 
       <Route path="/" element={<RootRedirect />} />
 
@@ -65,7 +69,16 @@ export default function AppRoutes() {
           }
         />
 
-        {MODULES.filter((m) => m.path !== '/usuarios').map((module) => (
+        <Route
+          path="/servicios"
+          element={
+            <ProtectedRoute permissions={MODULES.find((m) => m.path === '/servicios').permissions}>
+              <ServiciosPage />
+            </ProtectedRoute>
+          }
+        />
+
+        {MODULES.filter((m) => m.path !== '/usuarios' && m.path !== '/servicios').map((module) => (
           <Route
             key={module.path}
             path={module.path}
