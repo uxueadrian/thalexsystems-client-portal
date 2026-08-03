@@ -9,6 +9,7 @@ import ComingSoon from '../components/layout/ComingSoon'
 import LoginPage from '../pages/auth/LoginPage'
 import DashboardHome from '../pages/dashboard/DashboardHome'
 import ProfilePage from '../pages/dashboard/ProfilePage'
+import UsuariosPage from '../pages/users/UsuariosPage'
 import NotFoundPage from '../pages/errors/NotFoundPage'
 import UnauthorizedPage from '../pages/errors/UnauthorizedPage'
 import { useAuth } from '../hooks/useAuth'
@@ -55,7 +56,16 @@ export default function AppRoutes() {
           }
         />
 
-        {MODULES.map((module) => (
+        <Route
+          path="/usuarios"
+          element={
+            <ProtectedRoute permissions={MODULES.find((m) => m.path === '/usuarios').permissions}>
+              <UsuariosPage />
+            </ProtectedRoute>
+          }
+        />
+
+        {MODULES.filter((m) => m.path !== '/usuarios').map((module) => (
           <Route
             key={module.path}
             path={module.path}
